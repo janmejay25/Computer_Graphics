@@ -99,6 +99,10 @@ int main() {
 
         drawScreen(&dino, obstacleX);
 
+
+
+
+        
         // Move the obstacle left
         obstacleX--;
         if (obstacleX < 0) {

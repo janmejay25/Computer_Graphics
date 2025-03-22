@@ -11,6 +11,7 @@ void floodFill4(int x, int y, int fillColor, int oldColor) {
     }
 }
 
+
 void floodFill8(int x, int y, int fillColor, int oldColor) {
     if (getpixel(x, y) == oldColor) {
         putpixel(x, y, fillColor);

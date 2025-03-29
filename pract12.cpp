@@ -14,25 +14,27 @@ void drawStickMan(int x, int y) {
     // Draw legs
     line(x, y + 30, x - 20, y + 60);
     line(x, y + 30, x + 20, y + 60);
+
+    void drawFace(int blink) {
+        // Draw face outline
+        circle(400, 200, 100);
+    
+        // Draw eyes (blinking effect)
+        if (blink == 0) {
+            circle(360, 170, 10);  // Left eye open
+            circle(440, 170, 10);  // Right eye open
+        } else {
+            line(350, 170, 370, 170);  // Left eye closed
+            line(430, 170, 450, 170);  // Right eye closed
+        }
+    
+        // Draw mouth (smiling)
+        arc(400, 230, 200, 340, 30);
+    }
 }
 
 // Function to draw a face with blinking eyes at fixed position
-void drawFace(int blink) {
-    // Draw face outline
-    circle(400, 200, 100);
 
-    // Draw eyes (blinking effect)
-    if (blink == 0) {
-        circle(360, 170, 10);  // Left eye open
-        circle(440, 170, 10);  // Right eye open
-    } else {
-        line(350, 170, 370, 170);  // Left eye closed
-        line(430, 170, 450, 170);  // Right eye closed
-    }
-
-    // Draw mouth (smiling)
-    arc(400, 230, 200, 340, 30);
-}
 
 int main() { 
     int gd = DETECT, gm;

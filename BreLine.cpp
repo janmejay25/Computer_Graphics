@@ -16,7 +16,6 @@ void drawLineBresenham(int x1, int y1, int x2, int y2) {
         }
         putpixel(x, y, WHITE);
     }
-    
 }
 
 int main() {
